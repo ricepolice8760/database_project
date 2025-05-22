@@ -158,14 +158,14 @@ if st.session_state.logged_in:
     if menu == "내 루틴":
         st.header("내 운동 루틴")
 
-        # --- 이미지 추가 및 크기 조절 부분 ---
+        # --- 이미지 추가 및 크기 조절 부분 (수정됨: use_container_width 사용) ---
         try:
             # 'exercise_background.jpg' 파일을 app.py와 같은 폴더에 넣어주세요.
             # width 매개변수를 사용하여 이미지 너비를 픽셀 단위로 조절할 수 있습니다.
-            # use_column_width=False로 설정하여 width 값을 존중합니다.
-            st.image("poirier.jpg", caption="당신의 건강한 습관을 응원합니다!", width=400, use_column_width=False)
+            # use_container_width=False로 설정하여 width 값을 존중합니다.
+            st.image("poirier.jpg", caption="당신의 건강한 습관을 응원합니다!", width=400, use_container_width=False)
         except FileNotFoundError:
-            st.warning("`poirier.jpg` 이미지를 찾을 수 없습니다. 파일을 `app.py`와 같은 폴더에 넣어주세요.")
+            st.warning("poirier.jpg` 이미지를 찾을 수 없습니다. 파일을 `app.py`와 같은 폴더에 넣어주세요.")
         # --- 이미지 추가 및 크기 조절 부분 끝 ---
 
         st.markdown("---") # 이미지와 다음 섹션 구분
